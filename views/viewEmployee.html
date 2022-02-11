@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Employees</title>
+</head>
+<body>
+    <h1>DATOS DE LOS EMPLOYEES</h1><br>
+    <!-- <%=data%> -->
+    
+    <table border="1">
+        <th>ID</th>
+        <th>Name</th>
+        <th>DoB</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Marital Status</th>
+        <th>Action</th>
+        <% for (let j = 0; j < data.recordset.length; j++) {%>
+            <tr>
+                <td>
+                    <%= data.recordset[j].EmployeeId %>
+                </td>
+                <td>
+                    <%= data.recordset[j].name %>
+                </td>
+                <td>
+                    <%= data.recordset[j].dob %>
+                </td>
+                <td>
+                    <%= data.recordset[j].phone %>
+                </td>
+                <td>
+                    <%= data.recordset[j].email %>
+                </td>
+                <td>
+                    <%= data.recordset[j].salary %>
+                </td>
+                <td>
+                    <%= data.recordset[j].marital_status %>
+                </td>
+                <td>
+                    <a href="/Employee/<%= data.recordset[j].EmployeeId %>"><button>DELETE</button></a>
+                </td>
+            </tr>
+                
+        <% } %>
+    </table>
+        
+        
+</body>
+</html>

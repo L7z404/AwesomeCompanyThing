@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+</head>
+<body>
+    <h1>ADD EMPLOYEE</h1><br>
+
+    <form action="/saveEmp" method="post">
+        Name: <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
+        Date of Birth: <input type="date" id="fecha" name="fecha" placeholder="Date of Birth"><br>
+        Phone: <input type="text" id="telefono" name="telefono" placeholder="Phone"><br>
+        Email: <input type="email" name="correo" id="correo" placeholder="Email"><br>
+        Salary: <input type="number" min="0" step="0.01" value="0.00" name="salary" id="salary" placeholder="Salary"><br>
+        Marital Status: <select name="mstat" id="maritalstat">
+            <option value="0" selected disabled>---Select an option---</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Divorced">Divorced</option>
+        </select> <br><br>
+        <button type="submit">Save Employee</button>
+    </form>
+</body>
+</html>
